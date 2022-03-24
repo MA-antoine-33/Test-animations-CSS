@@ -1,0 +1,7 @@
+@mixin border ($color: $border-color, $size : $border-size, $radius : $border-radius, $background : $color-primary) {
+    border: $size solid $color;
+    border-radius: $radius;
+    margin: 5px 0px 5px 0px;
+    padding: 10px;
+    background-color: $background;
+}

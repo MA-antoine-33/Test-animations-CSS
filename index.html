@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang =fr>
+    <head>
+        <meta charset="utf=8">
+        <link rel="stylesheet" href="css/style.css">
+        <title>Le commerce de bananes</title>
+    </head>
+    <body>
+        <header>
+            <!--Implementation of the menu and logo-->
+            <div class="nav">
+                <img src="images/logo-monkey.jpg" alt="logo de singe">
+                <ul class="nav__menu">
+                    <a href="#trouver-bananes" class="btn"><li>Ou trouver des bananes</li></a>
+                    <a href="#membres" class="btn"><li>Nos membres engagés</li></a>
+                    <a href="#plan" class="btn"><li>Notre plan d'action</li></a>
+                </ul>
+            </div>
+            <!--Implementation of the title and the banner-->
+            <div class="bandeau"><div class="bandeau__title">
+                    <h1>La compagnie des mangeurs de bananes</h1>
+                    <div class="bandeau__title--btn">
+                        <div class="btn">
+                            Nous rejoindre
+                        </div>
+                        <div class="btn">
+                            Plus de bananes
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section class="section">
+            <!--Implementation of the article-->
+            <article>
+                <h2 id="trouver-bananes">Ou trouver des bananes</h2>
+                <div class="article__banane">
+                    <div class="btn btn-lieu">
+                        Amazonie
+                    </div>
+                    <div class="article__banane--ball"></div>
+                </div>
+                <div class="article__banane">
+                    <div class="btn btn-lieu">
+                        Asie
+                    </div>
+                    <div class="article__banane--ball"></div>
+                </div>
+                <div class="article__banane">
+                    <div class="btn btn-lieu">
+                        Bordeaux ?
+                    </div>
+                    <div class="article__banane--ball"></div>
+                </div>
+            </article>
+            <!--Implementation of the aside-->
+            <aside>
+                <h2 id="membres">Nos membres actifs dans cette quête</h2>
+                <div class="membres">
+                    <div class="membres__bloc">
+                        <img src="images/donkey.jpg" alt="Donkey kong">
+                        <div class="membres__bloc-description">
+                            <h3>Donkey</h3>
+                            <div class="btn btn-membres">
+                                En savoir Plus
+                            </div>
+                            <div class="ball"></div>
+                        </div>
+                    </div>
+                    <div class="membres__bloc">
+                        <img src="images/minion.jpg" alt="Minions">
+                        <div class="membres__bloc-description">
+                            <h3>Minions</h3>
+                            <div class="btn btn-membres">
+                                En savoir Plus
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </section>
+        <!--Implementation of the second section-->
+        <section class="section section2">
+            <h2 id="plan">Plan d'action</h2>
+            <p>Aucun pour le moment.</p>
+            <form method="post" action="formulaire.php" class="form">
+                <div class="form__text">
+                    <label for="idee">Une piste ?</label>
+                    <input type="text" name="idee" id="idee" placeholder="On a besoin de vous, alors soyez inspiré">
+                    <input type="submit" name="submit" id="submit" value="Soyez créatif">
+                </div>
+                <div class="form__email">
+                    <label for="email">Votre email</label>
+                    <input type="email" name="email" id="email">
+                </div>
+            </form>
+        </section>
+        <!--Implementation of the footer-->
+        <footer>
+            <div class="footer-contact">
+                <h3>Contact</h3>
+                <ul>
+                    <li>My phone numner 00.22.00.22.00</li>
+                    <li>My fax 00.faxfaxfax</li>
+                    <li>my email 00email@email</li>
+                </ul>
+            </div>
+            <div class="footer-legal">
+                <h3>Legal</h3>
+                <ul>
+                    <li>You've to read this</li>
+                    <li>It's importante</li>
+                    <li>Realy importante</li>
+                </ul>
+            </div>
+            <div class="footer-thanks">
+                <h3>Gratitude</h3>
+                <ul>
+                    <li>Monkey man</li>
+                    <li>banana</li>
+                </ul>
+            </div>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,73 @@
+.btn {
+    @include border ($radius : 25px, $color : $color-hover);
+    transform: scale(1);
+    margin: 15px;
+    &:hover {
+        @include border ($background : $color-hover, $radius : 25px, $color : $color-hover);
+        margin: 15px;
+        transform: scale(1.15);
+        transition: 0.8s transform;
+    }
+}
+#idee {
+    @include border ($background: rgb(255, 254, 189));
+    width: 250px;
+    transform: scale(1);
+    transition: transform 1.2s;
+    margin-left: 80px;
+    margin-bottom: 10px;
+    &:focus {
+        @include border ($background: $color-primary);
+        transform: scale(1.5); 
+        margin-left: 80px;
+        margin-bottom: 10px;
+    }
+}
+#submit {
+    @include border;
+    margin-left: 80px;
+}
+#email {
+    @include border ($background: rgb(255, 254, 189));
+    width: 250px;
+    margin-left: 80px;
+    margin-bottom: 10px;
+    transform: scale(1);
+    transition: transform 1.2s;
+    &:focus {
+        @include border ($background: $color-primary);
+        transform: scale(1.5); 
+        margin-left: 80px;
+        margin-bottom: 10px;
+    }
+    &:invalid {
+        color: rgb(255, 0, 0);
+    }
+    &:not(:focus):invalid {
+        @include border ($background: rgba(78, 8, 8, 0.589));
+        margin-left: 80px;
+        margin-bottom: 10px;
+    }
+}
+.btn-lieu {
+    &:hover + .article__banane--ball{
+        transform: scale(1.7);
+    }
+    &:active + .article__banane--ball {
+        transform: scale(0.5);
+        background-color: $color-primary;
+    }
+}
+.btn-membres {
+    &:hover + .ball {
+        transform: scale(1.4);
+        background-color: $color-primary;
+        right: 25px;
+    }
+    &:active + .ball {
+        transform: scale(1.8);
+        background-color: $border-color;
+        right: 50px;
+        top: 15px;
+    }
+}

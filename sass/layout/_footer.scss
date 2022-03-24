@@ -1,0 +1,7 @@
+footer {
+    @include border;
+    display: flex;
+    div {
+        margin-right: 150px;
+    }
+}

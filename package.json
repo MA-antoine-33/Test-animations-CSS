@@ -1,0 +1,25 @@
+{
+  "name": "test-animations-css",
+  "version": "1.0.0",
+  "description": "Website front-end to practice my animations skill in css",
+  "main": "index.js",
+  "scripts": {
+    "sass" : "sass --watch ./sass/main.scss:./css/style.css",
+    "prefix": "postcss ./css/style.css --use autoprefixer -d ./css/prefixed/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MA-antoine-33/Test-animations-CSS.git"
+  },
+  "keywords": [
+    "animations",
+    "css"
+  ],
+  "author": "Antoine",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MA-antoine-33/Test-animations-CSS/issues"
+  },
+  "homepage": "https://github.com/MA-antoine-33/Test-animations-CSS#readme",
+  "browserslist" : "last 4 versions"
+}
