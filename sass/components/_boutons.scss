@@ -130,6 +130,15 @@
         border-radius: 15px;
     }
 }
+.btn-charge2 {
+    @include border ($radius : 25px, $color : $color-hover);
+    &:hover + .plan__charge2 {
+        & > .plan__charge2--barre {
+            transform: scaleX(1);
+            animation: progress-bar 4s;
+        }
+    }
+}
 
 /*Code button 3d*/
 .button3d {
