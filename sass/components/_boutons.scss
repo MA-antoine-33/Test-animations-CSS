@@ -51,7 +51,11 @@
 }
 .btn-lieu {
     &:hover + .article__banane--ball{
-        transform: scale(1.7);
+        transform: scale(5);
+        span {
+            transform: translateX(10px) scale(0.5) rotate(720deg);
+            visibility: visible;
+        }
     }
     &:active + .article__banane--ball {
         transform: scale(0.5);
@@ -83,3 +87,88 @@
         background-color: $color-primary-end;
     }
 }
+.btn_header {
+    &:hover + .carre {
+        transform: perspective(25px) rotateX(45deg) scale(2, 0.5);
+    }
+    &:hover + .carre2 {
+        transform: scaleX(4) rotate(2turn) translateX(25px);
+    }
+    &:active +.carre {
+        transform: translate(100px, 100px);
+    }
+}
+.btn-charge {
+    &:hover + .plan__charge {
+        & > .plan__charge--barre {
+        transform: scaleX(1);
+        }
+        & > .plan__charge--p {
+            visibility: visible;
+            transform: rotate(5turn);
+        }
+    }
+}
+.btn-footer {
+    @include border;
+    position: relative;
+    &:hover {
+        &::after {
+            opacity: 1;
+        }
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        opacity: 0;
+        background-color: darken($color-primary, 50);
+        transition: 2s;
+        border-radius: 15px;
+    }
+}
+
+/*Code button 3d*/
+.button3d {
+    margin:30px auto;
+    width: 75%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column-reverse;
+    
+  .btn3d {
+      color: white;
+      font-size: 3.5rem;
+      cursor: pointer;
+      position: relative;
+      width: $btn-width;
+      height: $btn-height;
+      perspective: $persp;
+      &:active {
+          & > .btn__flip {
+              transform: rotateX(-90deg);
+          }
+      }
+      .btn__flip {
+          @include facet; 
+          transform-style: preserve-3d;
+          transform-origin: center bottom ($btn-height/2);
+          transition: transform 500ms cubic-bezier(.7,.01,.23,.99);
+          transform: rotateX(0deg);
+          .btn__flip--off {
+              transform: rotateX(0deg) translateZ($btn-height/2);
+              @include facet;
+              background: $cd-off;
+          }
+          .btn__flip--on {
+              transform: rotateX(90deg) translateZ($btn-height/2);
+              @include facet;
+              background: $cd-on;
+          }
+      }
+  }
+  }

@@ -23,15 +23,27 @@
 .article__banane {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin: 25px;
     &--ball {
-        width: 50px;
-        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 10px;
+        height: 10px;
         border: 1px solid $color-secondary;
         background-color: $color-secondary;
         border-radius: 50px;
-        transition: transform 4s;
+        transition: transform 1s;
+        span {
+            font-size: 1em;
+            display: inline-block;
+            padding: 5px;
+            visibility: hidden;
+            transition: transform 3s 1s;
+        }
     }
+    
 }
 .ball {
     width: 30px;
@@ -50,3 +62,23 @@
     border-radius: 30px;
     transition: transform 2s;
 }
+
+
+.plan__charge {
+    border-top: 2px solid $color-carre;
+    padding: 3px;
+    &--barre {
+        width: 300px;
+        height: 10px;
+        background-color: $color-hover;
+        transform: scaleX(0);
+        transition: 3s cubic-bezier(1,0,1,.47);
+        transform-origin: left;
+    }
+    &--p {
+        visibility: hidden;
+        transition: 3s 3s;
+    }
+}
+
+

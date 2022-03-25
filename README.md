@@ -12,8 +12,7 @@ Code composition :
                     -layout folder : -footer.scss : contains all rules for the footer
                                     - header.scss : contains all rules for the header
                     -pages folder : -section.scss : contains all rules for the body                                   
-                    -utils folder : - functions.scss : contains all functions of this website
-                                    - mixins.scss : contains all mixins of this website
+                    -utils folder :- mixins.scss : contains all mixins of this website
                                     - variables.scss : contains all variables of this website
                     -main.scss : contains all links to import in css file
     -css folders : - style.css : All the code in css language

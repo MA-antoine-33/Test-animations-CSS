@@ -1,3 +1,5 @@
+/*Variables bouton 3d*/
+/*Mixin button 3d*/
 body {
   max-width: 1200px;
   margin: auto;
@@ -45,10 +47,32 @@ header {
   margin: 5px;
   text-align: center;
 }
-.bandeau__title--btn {
+.bandeau__title {
   display: flex;
   justify-content: space-around;
-  padding-bottom: 15px;
+  padding: 15px 0px;
+}
+.bandeau__title--btn {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+
+.carre {
+  width: 20px;
+  height: 50px;
+  border: 2px solid #000;
+  background-color: #000;
+  transition: transform 2s cubic-bezier(0.5, 0.1, 0.9, 0.5);
+}
+
+.carre2 {
+  margin-bottom: 15px;
+  width: 20px;
+  height: 50px;
+  border: 2px solid #8b8903b7;
+  background-color: #8b8903b7;
+  transition: transform 5s cubic-bezier(0.5, 0.1, 0.9, 0.5);
 }
 
 footer {
@@ -101,15 +125,26 @@ footer div {
 .article__banane {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin: 25px;
 }
 .article__banane--ball {
-  width: 50px;
-  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10px;
+  height: 10px;
   border: 1px solid #fda604;
   background-color: #fda604;
   border-radius: 50px;
-  transition: transform 4s;
+  transition: transform 1s;
+}
+.article__banane--ball span {
+  font-size: 1em;
+  display: inline-block;
+  padding: 5px;
+  visibility: hidden;
+  transition: transform 3s 1s;
 }
 
 .ball {
@@ -129,6 +164,23 @@ footer div {
   background-color: #fced6d96;
   border-radius: 30px;
   transition: transform 2s;
+}
+
+.plan__charge {
+  border-top: 2px solid #000;
+  padding: 3px;
+}
+.plan__charge--barre {
+  width: 300px;
+  height: 10px;
+  background-color: #8b8903b7;
+  transform: scaleX(0);
+  transition: 3s cubic-bezier(1, 0, 1, 0.47);
+  transform-origin: left;
+}
+.plan__charge--p {
+  visibility: hidden;
+  transition: 3s 3s;
 }
 
 .btn {
@@ -219,7 +271,11 @@ footer div {
 }
 
 .btn-lieu:hover + .article__banane--ball {
-  transform: scale(1.7);
+  transform: scale(5);
+}
+.btn-lieu:hover + .article__banane--ball span {
+  transform: translateX(10px) scale(0.5) rotate(720deg);
+  visibility: visible;
 }
 .btn-lieu:active + .article__banane--ball {
   transform: scale(0.5);
@@ -258,6 +314,114 @@ footer div {
 }
 .btn-membres:hover + .ball--minion {
   background-color: #ff0000d0;
+}
+
+.btn_header:hover + .carre {
+  transform: perspective(25px) rotateX(45deg) scale(2, 0.5);
+}
+.btn_header:hover + .carre2 {
+  transform: scaleX(4) rotate(2turn) translateX(25px);
+}
+.btn_header:active + .carre {
+  transform: translate(100px, 100px);
+}
+
+.btn-charge:hover + .plan__charge > .plan__charge--barre {
+  transform: scaleX(1);
+}
+.btn-charge:hover + .plan__charge > .plan__charge--p {
+  visibility: visible;
+  transform: rotate(5turn);
+}
+
+.btn-footer {
+  border: 2px solid #000000;
+  border-radius: 15px;
+  margin: 5px 0px 5px 0px;
+  padding: 10px;
+  background-color: #fced6d96;
+  position: relative;
+}
+.btn-footer:hover::after {
+  opacity: 1;
+}
+.btn-footer::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  opacity: 0;
+  background-color: rgba(104, 93, 2, 0.5882352941);
+  transition: 2s;
+  border-radius: 15px;
+}
+
+/*Code button 3d*/
+.button3d {
+  margin: 30px auto;
+  width: 75%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column-reverse;
+}
+.button3d .btn3d {
+  color: white;
+  font-size: 3.5rem;
+  cursor: pointer;
+  position: relative;
+  width: 100px;
+  height: 50px;
+  perspective: 500px;
+}
+.button3d .btn3d:active > .btn__flip {
+  transform: rotateX(-90deg);
+}
+.button3d .btn3d .btn__flip {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform-style: preserve-3d;
+  transform-origin: center bottom 25px;
+  transition: transform 500ms cubic-bezier(0.7, 0.01, 0.23, 0.99);
+  transform: rotateX(0deg);
+}
+.button3d .btn3d .btn__flip .btn__flip--off {
+  transform: rotateX(0deg) translateZ(25px);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ff0000d0;
+}
+.button3d .btn3d .btn__flip .btn__flip--on {
+  transform: rotateX(90deg) translateZ(25px);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #8b8903b7;
 }
 
 /*# sourceMappingURL=style.css.map */

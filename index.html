@@ -17,15 +17,20 @@
                 </ul>
             </div>
             <!--Implementation of the title and the banner-->
-            <div class="bandeau"><div class="bandeau__title">
-                    <h1>La compagnie des mangeurs de bananes</h1>
+            <div class="bandeau">
+                <h1>La compagnie des mangeurs de bananes</h1>
+                    <div class="bandeau__title">
                     <div class="bandeau__title--btn">
-                        <div class="btn">
+                        <div class="btn btn_header">
                             Nous rejoindre
                         </div>
-                        <div class="btn">
+                        <div class="carre2"></div>
+                    </div>
+                    <div class="bandeau__title--btn">
+                        <div class="btn btn_header">
                             Plus de bananes
                         </div>
+                        <div class="carre"></div>
                     </div>
                 </div>
             </div>
@@ -38,19 +43,25 @@
                     <div class="btn btn-lieu">
                         Amazonie
                     </div>
-                    <div class="article__banane--ball"></div>
+                    <div class="article__banane--ball">
+                        <span>Oui</span>
+                    </div>
                 </div>
                 <div class="article__banane">
                     <div class="btn btn-lieu">
                         Asie
                     </div>
-                    <div class="article__banane--ball"></div>
+                    <div class="article__banane--ball">
+                        <span>Oui</span>
+                    </div>
                 </div>
                 <div class="article__banane">
                     <div class="btn btn-lieu">
                         Bordeaux ?
                     </div>
-                    <div class="article__banane--ball"></div>
+                    <div class="article__banane--ball">
+                        <span>non</span>
+                    </div>
                 </div>
             </article>
             <!--Implementation of the aside-->
@@ -83,7 +94,24 @@
         <!--Implementation of the second section-->
         <section class="section section2">
             <h2 id="plan">Plan d'action</h2>
-            <p>Aucun pour le moment.</p>
+            <div>
+                <div class="button3d">
+                      <div class="btn3d">
+                        <div class="btn__flip">
+                            <div class="btn__flip--off">OFF</div>
+                            <div class="btn__flip--on">ON</div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+            <div class="plan">
+                <div class="btn btn-charge">Lancement</div>
+                <div class="plan__charge">
+                    <div class="plan__charge--barre"></div>
+                    <p class="plan__charge--p">Aucun pour le moment.</p>
+                </div>
+            </div>
+            
             <form method="post" action="formulaire.php" class="form">
                 <div class="form__text">
                     <label for="idee">Une piste ?</label>
@@ -99,7 +127,7 @@
         <!--Implementation of the footer-->
         <footer>
             <div class="footer-contact">
-                <h3>Contact</h3>
+                <div class="btn-footer">Contact</div>
                 <ul>
                     <li>My phone numner 00.22.00.22.00</li>
                     <li>My fax 00.faxfaxfax</li>
