@@ -120,6 +120,7 @@ footer div {
 
 .form {
   text-align: left;
+  margin-top: 50px;
 }
 
 .article__banane {
@@ -181,6 +182,18 @@ footer div {
 .plan__charge--p {
   visibility: hidden;
   transition: 3s 3s;
+}
+
+.plan__charge2 {
+  border: 2px solid #000;
+  padding: 3px;
+}
+.plan__charge2--barre {
+  width: 300px;
+  height: 10px;
+  background-color: #8b8903b7;
+  transform: scaleX(0);
+  transform-origin: left;
 }
 
 .btn {
@@ -358,6 +371,18 @@ footer div {
   border-radius: 15px;
 }
 
+.btn-charge2 {
+  border: 2px solid #8b8903b7;
+  border-radius: 25px;
+  margin: 5px 0px 5px 0px;
+  padding: 10px;
+  background-color: #fced6d96;
+}
+.btn-charge2:hover + .plan__charge2 > .plan__charge2--barre {
+  transform: scaleX(1);
+  animation: progress-bar 4s;
+}
+
 /*Code button 3d*/
 .button3d {
   margin: 30px auto;
@@ -422,6 +447,33 @@ footer div {
   justify-content: center;
   align-items: center;
   background: #8b8903b7;
+}
+
+@keyframes progress-bar {
+  0% {
+    transform: scale(0);
+    opacity: 0.2;
+  }
+  25% {
+    transform: scale(0.8);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(0.4);
+    opacity: 0.4;
+  }
+  65% {
+    transform: scale(0.9);
+    opacity: 0.9;
+  }
+  80% {
+    transform: scale(0.2);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

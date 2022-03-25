@@ -19,6 +19,7 @@
 }
 .form {
     text-align: left;
+    margin-top: 50px;
 }
 .article__banane {
     display: flex;
@@ -78,6 +79,17 @@
     &--p {
         visibility: hidden;
         transition: 3s 3s;
+    }
+}
+.plan__charge2 {
+    border: 2px solid $color-carre;
+    padding: 3px;
+    &--barre {
+    width: 300px;
+    height: 10px;
+    background-color: $color-hover;
+    transform: scaleX(0);
+    transform-origin: left;
     }
 }
 
