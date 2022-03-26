@@ -139,6 +139,12 @@
         }
     }
 }
+.plan__banane1 {
+    &--barre {
+        animation: progress-bar 2s 2s;
+        animation-fill-mode: both;
+    } 
+}
 
 /*Code button 3d*/
 .button3d {

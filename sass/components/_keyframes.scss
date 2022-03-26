@@ -1,26 +1,56 @@
 @keyframes progress-bar {
     0% {
-        transform: scale(0);
+        transform: scale(0.5);
         opacity: 0.2;
     }
-    25% {
-        transform: scale(0.8);
+    0%,95% {
+        background-color: $color-hover;
+    }
+    10% {
+        transform: scale(0.8) rotate(0.2turn);
         opacity: 0.8;
     }
-    50% {
-        transform: scale(0.4);
+    15% {
+        transform: scale(0.4) rotate(0.4turn);
+        opacity: 0.8;
+    }
+    20% {
+        transform: scale(0.8) rotate(0.6turn);
+        opacity: 0.8;
+    }
+    25% {
+        transform: scale(0.4) rotate(0.8turn);
+        opacity: 0.8;
+    }
+    30% {
+        transform: scale(0.6) rotate(1turn);
         opacity: 0.4;
     }
-    65% {
-        transform: scale(0.9);
+    45% {
+        transform: scale(0.2) rotate(1turn);
         opacity: 0.9;
+        animation-timing-function: cubic-bezier(.9,0,.1,1)
+    }
+    65% {
+        transform: scale(0.9) rotate(1turn);
+        opacity: 0.9;
+        animation-timing-function: cubic-bezier(.9,0,.1,1)
     }
     80% {
-        transform: scale(0.2);
+        transform: scale(0.2) rotate(1turn);
         opacity: 0.5;
     }
     100% {
-        transform: scale(1);
+        transform: scale(1) rotate(1turn);
         opacity: 1;
+        background-color: red;
+    }
+}
+@keyframes banner-banane {
+    0% {
+        transform: translateX(-9999px);
+    }
+    100% {
+        transform: translateX(0);
     }
 }
