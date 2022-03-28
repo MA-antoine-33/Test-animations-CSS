@@ -217,6 +217,85 @@ footer div {
   transform-origin: left;
 }
 
+.load {
+  width: 200px;
+  height: 150px;
+  display: flex;
+  justify-content: space-evenly;
+}
+.load__bar {
+  background-color: #8b8903b7;
+  height: 100%;
+  width: 10%;
+  animation: bars 1s backwards infinite alternate ease-in-out;
+}
+.load__bar--1 {
+  animation-delay: 0.2s;
+}
+.load__bar--1-inv {
+  animation-delay: 0.29s;
+  animation-direction: alternate-reverse;
+  background-color: rgba(39, 39, 1, 0.7176470588);
+}
+.load__bar:hover {
+  animation-play-state: paused;
+}
+.load__bar--2 {
+  animation-delay: 0.4s;
+}
+.load__bar--2-inv {
+  animation-delay: 1.21s;
+  animation-direction: alternate-reverse;
+  background-color: rgba(39, 39, 1, 0.7176470588);
+}
+.load__bar:hover {
+  animation-play-state: paused;
+}
+.load__bar--3 {
+  animation-delay: 0.6s;
+}
+.load__bar--3-inv {
+  animation-delay: 1.89s;
+  animation-direction: alternate-reverse;
+  background-color: rgba(39, 39, 1, 0.7176470588);
+}
+.load__bar:hover {
+  animation-play-state: paused;
+}
+.load__bar--4 {
+  animation-delay: 0.8s;
+}
+.load__bar--4-inv {
+  animation-delay: 0.815s;
+  animation-direction: alternate-reverse;
+  background-color: rgba(39, 39, 1, 0.7176470588);
+}
+.load__bar:hover {
+  animation-play-state: paused;
+}
+.load__bar--5 {
+  animation-delay: 1s;
+}
+.load__bar--5-inv {
+  animation-delay: 1.375s;
+  animation-direction: alternate-reverse;
+  background-color: rgba(39, 39, 1, 0.7176470588);
+}
+.load__bar:hover {
+  animation-play-state: paused;
+}
+
+.spin__carre {
+  background-color: #8b8903b7;
+  margin: 25px;
+  width: 100px;
+  height: 100px;
+  animation: spin 3s linear infinite paused;
+}
+.spin__carre:hover {
+  animation-play-state: running;
+}
+
 .btn {
   border: 2px solid #8b8903b7;
   border-radius: 25px;
@@ -279,7 +358,6 @@ footer div {
   margin-left: 80px;
   margin-bottom: 10px;
   transform: scale(1);
-  transition: transform 1.2s;
 }
 #email:focus {
   border: 2px solid #000000;
@@ -302,6 +380,7 @@ footer div {
   background-color: rgba(78, 8, 8, 0.589);
   margin-left: 80px;
   margin-bottom: 10px;
+  animation: headshake 100ms cubic-bezier(0.1, 0.1, 0.6, 0.9) 10;
 }
 
 .btn-lieu:hover + .article__banane--ball {
@@ -529,6 +608,30 @@ footer div {
   }
   100% {
     transform: translateX(0);
+  }
+}
+@keyframes headshake {
+  25% {
+    transform: translateX(50%);
+  }
+  75% {
+    transform: translateX(-50%);
+  }
+}
+@keyframes bars {
+  0% {
+    transform: scaleY(0.2);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }
 

@@ -33,7 +33,6 @@
     margin-left: 80px;
     margin-bottom: 10px;
     transform: scale(1);
-    transition: transform 1.2s;
     &:focus {
         @include border ($background: $color-primary);
         transform: scale(1.5); 
@@ -47,6 +46,7 @@
         @include border ($background: rgba(78, 8, 8, 0.589));
         margin-left: 80px;
         margin-bottom: 10px;
+        animation: headshake 100ms cubic-bezier(0.1,0.1,0.6,0.9) 10;
     }
 }
 .btn-lieu {

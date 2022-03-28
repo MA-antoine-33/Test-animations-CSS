@@ -54,3 +54,27 @@
         transform: translateX(0);
     }
 }
+@keyframes headshake {
+    25% {
+        transform: translateX($shake-intensity);
+    }
+    75% {
+        transform: translateX(-$shake-intensity);
+    }
+}
+@keyframes bars {
+    0% {
+        transform: scaleY(0.2);
+    }
+    100% {
+        transform: scaleY(1.0);
+    }
+}
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

@@ -9,6 +9,13 @@ $border-color:#000000;
 $border-size: 2px;
 $border-radius:15px;
 
+$shake-intensity: 50%;
+
+$anim-dur:1s;
+$num-bars: 5;
+$anim-delay: $anim-dur / $num-bars;
+
+
 /*Variables bouton 3d*/
 $cd-on: $color-hover;
 $cd-off: $color-primary-end;
