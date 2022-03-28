@@ -92,3 +92,37 @@
     transform-origin: left;
     }
 }
+.load {
+    width: 200px;
+    height: 150px;
+    display: flex;
+    justify-content: space-evenly;
+    &__bar {
+        background-color: $color-hover;
+        height: 100%;
+        width: 10%;
+        animation: bars $anim-dur backwards infinite alternate ease-in-out;
+        @for $i from 1 through $num-bars {
+            &--#{$i} {
+                animation-delay: $anim-delay * $i;
+            }
+            &--#{$i}-inv {
+                animation-delay: $anim-delay * $i + random($limit: 100)*15ms;
+                animation-direction: alternate-reverse;
+                background-color: darken($color: $color-hover, $amount: 20);
+            }
+            &:hover {
+                animation-play-state: paused;
+            }
+        }
+    }
+}.spin__carre {
+    background-color: $color-hover;
+    margin: 25px;
+    width: 100px;
+    height: 100px;
+    animation: spin 3s linear infinite paused;
+    &:hover {
+        animation-play-state: running;
+    }
+}
